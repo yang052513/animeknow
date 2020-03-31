@@ -1,0 +1,45 @@
+@font-face {
+    font-family: cnFont;
+    src: url('../font/FZLTCXHJW.TTF');
+  }
+
+.card-container {
+    display: flex;
+    align-items: center;
+    width: 1000px;
+    height: 600px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 0 50px;
+    font-family: cnFont;
+    overflow-y: scroll;
+}
+
+.card-image {
+    width: 350px;
+    height: auto;  
+    margin-right: 40px;
+    box-shadow: 2px 6px 7px -4px rgba(0,0,0,0.75);
+    border-radius: 10px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.description {
+    line-height: 1.7em;
+}
+
+
+button {
+    position: fixed;
+    left: 0;
+    top: 0;
+}
