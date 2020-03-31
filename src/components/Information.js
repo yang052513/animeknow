@@ -10,11 +10,14 @@ function Information(props) {
     return(
         <div className="card-information-container">
             <Title text={props.title}/>
+            <div className="summary">    
+                <Episode text={props.episode}/>
+                <AirDate text={props.airdate}/>
+                <Rating text={props.rating}/>
+                <Rank text={props.rank}/>
+            </div>
             <Description text={props.description}/>
-            <Episode text={props.episode}/>
-            <AirDate text={props.airdate}/>
-            <Rating text={props.rating}/>
-            <Rank text={props.rank}/>
+         
         </div>
     )
 }

@@ -28,9 +28,10 @@ class Card extends Component {
         let requestUrl = "https://api.bgm.tv/subject/" + randomID + "?responseGroup=small";
         fetch(requestUrl)
             .then(response => response.json())
-            .then(data => {            
+            .then(data => {  
+                let animeName = data.name_cn === "" ? data.name : data.name_cn  
                 this.setState({
-                    title: data.name_cn,
+                    title: animeName,
                     description: data.summary,
                     episode: data.eps,
                     airdate: data.air_date,

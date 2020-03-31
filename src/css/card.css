@@ -3,25 +3,28 @@
     src: url('../font/FZLTCXHJW.TTF');
   }
 
+body {
+    background-color: #e0c9cb;
+}
 .card-container {
     display: flex;
-    align-items: center;
     width: 1000px;
-    height: 600px;
+    height: 500px;
     background-color: rgb(255, 255, 255);
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 5px 15px rgba(186, 126, 126, 0.3), 5px 5px 15px rgba(186, 126, 126, 0.2);
     border-radius: 20px;
     padding: 0 50px;
-    font-family: cnFont;
+    font-family: 'SF Pro SC','SF Pro Display','PingFang SC','Lucida Grande','Helvetica Neue',Helvetica,Arial,Verdana,sans-serif,"Hiragino Sans GB";
+    padding-top: 35px;
     overflow-y: scroll;
 }
 
 .card-image {
-    width: 350px;
+    width: 300px;
     height: auto;  
     margin-right: 40px;
     box-shadow: 2px 6px 7px -4px rgba(0,0,0,0.75);
@@ -31,13 +34,25 @@
 .title {
     font-weight: bold;
     font-size: 28px;
+    margin-top: 0;
+    color: rgb(220, 148, 148);
 }
 
 .description {
     line-height: 1.7em;
-    font-size: 14px;
+    font-size: 15px;
+    color: rgb(148, 109, 109);
 }
 
+.summary {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 200px;
+    font-size: 15px;
+    font-family: cnFont;
+    font-weight: bold;
+    color: rgb(160, 124, 123);
+}
 
 button {
     position: fixed;
