@@ -76,7 +76,7 @@ class Card extends Component {
                     onhold={this.state.onhold}
                     dropped={this.state.dropped}
                 />
-                <button onClick={this.handleChange}>Next One</button>
+                <button onClick={this.handleChange}>下一个</button>
             </div>
             </div>
         )

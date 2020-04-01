@@ -1,0 +1,49 @@
+@font-face {
+    font-family: cnFont;
+    src: url('../font/FZLTCXHJW.TTF');
+}
+
+.search-box-wrap {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -100%);
+}
+
+.search-icon {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: 20px;
+    top: 18px;
+}
+
+.search-box {
+    width: 800px;
+    height: 60px;
+    font-size: 20px;
+    font-family: cnFont;
+    border: none;
+    border-radius: 50px;
+    padding: 0 70px;
+    background: rgba(255, 255, 255, 0.2);
+    transition:  0.5s;
+}
+
+.search-box:focus {
+    outline: none;
+    box-shadow: 5px 5px 15px rgba(186, 126, 126, 0.3), 5px 5px 15px rgba(186, 126, 126, 0.2);
+    width: 1000px;
+    height: 70px;
+    font-size: 25px;
+}
+
+.search-result-wrap {
+    margin-top: 300px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.search-item {
+    width: 300px;
+}
