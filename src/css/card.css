@@ -6,10 +6,16 @@
 body {
     background-color: #e0c9cb;
 }
+
+.card-container-wrap {
+    display: none;
+}
+
 .card-container {
     display: flex;
     width: 1000px;
-    height: 500px;
+    height: 550px;
+    margin-top: 30px;
     background-color: rgb(255, 255, 255);
     position: absolute;
     left: 50%;
@@ -19,8 +25,8 @@ body {
     border-radius: 20px;
     padding: 0 50px;
     font-family: 'SF Pro SC','SF Pro Display','PingFang SC','Lucida Grande','Helvetica Neue',Helvetica,Arial,Verdana,sans-serif,"Hiragino Sans GB";
-    padding-top: 35px;
-    overflow-y: scroll;
+    /* padding-top: 35px; */
+    align-items: center;
 }
 
 .card-image {
@@ -54,8 +60,49 @@ body {
     color: rgb(160, 124, 123);
 }
 
+.summary-icon {
+    width: 25px;
+    height: auto;
+}
+
+.summary-item-wrap {
+    text-align: center;
+}
+
 button {
-    position: fixed;
-    left: 0;
-    top: 0;
+    position: absolute;
+    bottom: 0;
+}
+
+.collection-container {
+    display: flex;
+}
+
+.collection-container p {
+    margin-right: 10px;
+    padding: 15px 10px;
+    border-radius: 10px;
+    color: white;
+    font-family: cnFont;
+    font-weight: bold;
+}
+
+.wish {
+    background-color: #ffadd1;
+}
+
+.collect {
+    background-color: #87b3cb;
+}
+
+.doing {
+    background-color: #ffadad;
+}
+
+.on-hold {
+    background-color: #d3adff;
+}
+
+.dropped {
+    background-color: #7e7e7e;
 }

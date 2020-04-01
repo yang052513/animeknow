@@ -2,7 +2,11 @@ import React from 'react'
 
 function AirDate(props) {
     return (
-        <p className="air-date">放送日 {props.text}</p>
+        <div className="summary-item-wrap">
+            <img className="summary-icon" src="./image/airdate.png" alt="airdat" />
+            <p className="air-date">放送日 {props.text}</p>
+        </div>
+  
     )
 }
 

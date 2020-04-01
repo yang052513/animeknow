@@ -5,6 +5,7 @@ import Episode from './Episode'
 import AirDate from './AirDate'
 import Rank from './Rank'
 import Rating from './Rating'
+import Collection from './Collection'
 
 function Information(props) {
     return(
@@ -17,7 +18,13 @@ function Information(props) {
                 <Rank text={props.rank}/>
             </div>
             <Description text={props.description}/>
-         
+            <Collection 
+                wish={props.wish}
+                collect={props.collect}
+                doing={props.doing}
+                onhold={props.onhold}
+                dropped={props.dropped}
+            />
         </div>
     )
 }

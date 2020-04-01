@@ -2,7 +2,10 @@ import React from 'react'
 
 function Rank(props) {
     return(
-        <p className="rank">排名 {props.text}</p>
+        <div className="summary-item-wrap">
+            <img className="summary-icon" src="./image/rank.png" alt="airdat" />
+            <p className="rank">排名 {props.text}</p>
+        </div>
     )
 }
 

@@ -7,14 +7,19 @@ class Card extends Component {
     constructor() {
         super()
         this.state={
-            id: "",
-            title: "",
-            description: "",
-            episode: "",
-            airdate: "",
-            rating: "",
-            rank: "",
-            image: ""
+            id: "268545",
+            title: "因为太怕痛就全点防御力了",
+            description: "本条枫在好友白峰理沙推荐下开始游玩游戏“NewWorid Online”，创建了名为“梅普露”的角色。然而作为游戏初学者，梅普露选择了不受欢迎的大盾当武器，同时因为怕痛而把所有状态点加到防御力的极限加点。虽然在游戏初期因此吃了不少苦，但因为梅普露无视规则又异想天开的行动方式学到各种特殊技能，更以其奇特方式通关地城获得了罕见装备，令防御进一步提升。最强初学者化身“移动要塞”在游戏中尽情胡闹的冒险故事。",
+            episode: "12",
+            airdate: "2020-01-08",
+            rating: "6.3",
+            rank: "4305",
+            image: "./image/img.jpg",
+            wish: "154",
+            collect: "1117",
+            doing: "849",
+            onhold: "51",
+            dropped: "198"
         }
         this.handleChange = this.handleChange.bind(this)
     }
@@ -30,21 +35,30 @@ class Card extends Component {
             .then(response => response.json())
             .then(data => {  
                 let animeName = data.name_cn === "" ? data.name : data.name_cn  
+                let animeSummary = data.summary.length > 350 ? (data.summary.substring(0, 350).replace(/\s/g, "") + "...") : data.summary.replace(/\s/g, "")
+
                 this.setState({
                     title: animeName,
-                    description: data.summary,
+                    description: animeSummary,
                     episode: data.eps,
                     airdate: data.air_date,
                     rating: data.rating.score,
                     rank: data.rank,
-                    image: data.images.large
+                    image: data.images.large,
+                    wish: data.collection.wish === undefined ? 0 : data.collection.wish ,
+                    collect: data.collection.collect === undefined ? 0 : data.collection.collect,
+                    doing: data.collection.doing === undefined ? 0 : data.collection.doing,
+                    onhold: data.collection.on_hold === undefined ? 0 : data.collection.on_hold,
+                    dropped: data.collection.dropped === undefined ? 0 : data.collection.dropped
                 })
                 console.log(data)
+                console.log(data.summary.length)
             })
     }
 
     render() {
         return(
+            <div className="card-container-wrap">
             <div className="card-container">
                <Background 
                     image={this.state.image}
@@ -56,8 +70,14 @@ class Card extends Component {
                     airdate={this.state.airdate}
                     rating={this.state.rating}
                     rank={this.state.rank}
+                    wish={this.state.wish}
+                    collect={this.state.collect}
+                    doing={this.state.doing}
+                    onhold={this.state.onhold}
+                    dropped={this.state.dropped}
                 />
                 <button onClick={this.handleChange}>Next One</button>
+            </div>
             </div>
         )
     }

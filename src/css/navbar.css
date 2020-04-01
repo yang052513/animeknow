@@ -1,0 +1,27 @@
+@font-face {
+    font-family: cnFont;
+    src: url('../font/FZLTCXHJW.TTF');
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-family: cnFont;
+    margin-top: 20px;
+}
+
+.navbar a {
+    margin: 0 30px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.navbar img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 0 30px;
+}
