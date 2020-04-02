@@ -49,6 +49,7 @@
     width: 300px;
     margin: 10px 0;
     background-color: rgb(255, 255, 255);
+    /* background-color: rgb(182, 141, 141); */
     padding: 15px 10px;
     border-radius: 20px;
 }
@@ -62,17 +63,31 @@
     height: auto;
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    margin: 10px;
+    margin: 20px 10px 10px 10px;
+}
+
+.heading-type {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
 }
 
 .search-heading {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.type-icon {
+    width: 25px;
+    height: 25px;
+
 }
 
 .search-name {
     color: rgb(220, 148, 148);
-    font-size: 18px;
+    font-size: 20px;
+    padding-left: 20px;
 }
 
 .search-rank {
@@ -87,15 +102,18 @@
     font-size: 15px;
 }
 
-.search-sub-name {
+.search-subname {
     font-size: 12px;
     color: #999999;
+    margin-left: 20px;
 }
 
 .search-info-wrap {
     display: flex;
     font-size: 14px;
     color: rgb(148, 109, 109);
+    margin: 0;
+
 }
 
 .search-item-icon {

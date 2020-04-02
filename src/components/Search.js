@@ -18,20 +18,30 @@ class Search extends Component {
     handleChange(event) {
         const {name, value} = event.target
         let keywords = value
-        let requestUrl = "https://api.bgm.tv/search/subject/" + keywords + "?type=2&responseGroup=large&max_results=10"
-
-    fetch(requestUrl)
-        .then(response => response.json())
-        .then(data => {
-            this.setState({
+        let requestUrl = "https://api.bgm.tv/search/subject/" + keywords + "?responseGroup=large&max_results=25"
+        
+        if(value.length > 0) {
+            fetch(requestUrl, {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                this.setState({
                     result: data.list
                 })
-                console.log(this.state.result)
+            console.log(this.state.result.length)
+            console.log(this.state.result)
             
-        })
+            })  
+        }
     }
     render() {
-        const searchComponents = this.state.result.map(result => <SearchItem key={result.id} search={result}/>)
+        const searchComponents = 
+            this.state.result.map(result =>  <SearchItem key={result.id} search={result}/>)
+
         return(
             <div className="search-container">
                 <div className="search-box-wrap">
