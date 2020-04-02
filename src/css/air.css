@@ -1,0 +1,24 @@
+.air-item-img {
+    width: 300px;
+    height: auto;
+}
+
+.air-item-wrap  {
+    position: relative;
+    text-align: center;
+}
+
+.air-item-name {
+    color: white;
+    font-size: 40px;
+    position: absolute;
+    left: 45%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+}
+
+/* .air-item-airdate {
+    position: absolute;
+    left: 0;
+    top: 0;
+} */
