@@ -7,7 +7,8 @@ class Air extends Component {
         super()
         this.state={
             weekday: "",
-            airList: []
+            airList: [],
+            count: 0
         }
     }
 
@@ -25,7 +26,8 @@ class Air extends Component {
             
             this.setState({
                 airList: data[localDay - 1].items,
-                weekday: data[localDay - 1].weekday.cn
+                weekday: data[localDay - 1].weekday.cn,
+                count: data[localDay - 1].items.length
             })
         })
     }
@@ -41,9 +43,12 @@ class Air extends Component {
                 />)
 
         return (
-            <div>
-                <p>今日放送 {this.state.weekday}</p>
-                {airComponents}
+            <div className="air-container">
+                <p className="air-title">每日放送 <span className="air-weekday">{this.state.weekday}</span><span className="air-count">(今日共上映 {this.state.count} 部新番)</span></p>
+                
+                <div className="air-component-container">   
+                    {airComponents}      
+                </div>
             </div>
         )
     }
