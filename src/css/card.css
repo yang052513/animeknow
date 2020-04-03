@@ -98,7 +98,7 @@ body {
     background-color: #7e7e7e;
 }
 
-button {
+.next-card {
     position: absolute;
     left: 50%;
     bottom: 0;
@@ -113,7 +113,7 @@ button {
     font-weight: bold;
 }
 
-button:focus {
+.next-card:focus {
     outline: none;
 }
 

@@ -28,3 +28,20 @@
     border-radius: 50%;
     margin: 0 30px;
 }
+
+.sign-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 18px;
+    font-family: cnFont;
+    border-radius: 10px;
+    padding: 5px 10px;
+    border: 1px solid #ffadad;
+    color: #ffadad;
+    margin: 30px 40px;
+}
+
+.sign-btn:focus {
+    outline: none;
+}

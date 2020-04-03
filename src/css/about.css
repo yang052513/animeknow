@@ -1,0 +1,22 @@
+@font-face {
+    font-family: enFont;
+    src: url('../font/Raleway-ExtraLight.ttf');
+}
+
+.about-container {
+    width: 800px;
+    position: absolute;
+    padding: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 15px rgba(186, 126, 126, 0.3), 5px 5px 15px rgba(186, 126, 126, 0.2);
+}
+
+.about-container p {
+    line-height: 1.8em;
+    font-size: 18px;
+    font-family: enFont;
+    color: #946d6d;
+}

@@ -1,36 +1,54 @@
 # animeKnow
 
-## 介绍
+## Table of Contents
+- [Introduction](#01)
+- [Features](#02)
+- [Preview](#03)
+- [Technology](#04)
+- [Usage](#05)
 
+# 
+## <span id="01">Introduction</span>
 animeKnow is a Web App that built with React.js framework utilized Bangumi API. Bangumi API has tons of subjects database which includes animation, music, books and others. Sometime you dont know what to watch? animeKnow helps you find the animation for you.
 
-## 功能
-- 实时更新同步每日放送的新番列表
-- 搜寻上万条目包括动画，音乐，三次元，游戏，书籍种类
-- 随机推荐Banguimi前1000名动画作品
-- 收藏您喜欢的新番到个人账号
+# 
+## <span id="02">Features</span>
+- Real time updated animation list for that day
+- Search over thirty thousand subjects of animation, manga, film, music and game
+- Random recommendation feature that notify you the animatin with good rating
+- Bookmark the subject to your account 
 
-### 预览
-<i style="font-size: 13px">每日放送新番列表</i>
+# 
+## <span id="03">Demo</span>
+<i style="font-size: 13px">Air animation list</i>
 ![avatar](public/ref/1.png)
 
-<i style="font-size: 13px">搜索条目</i>
+<i style="font-size: 13px">Search subjects</i>
 ![avatar](public/ref/2.png)
 
-<i style="font-size: 13px">搜索条目返回结果</i>
+<i style="font-size: 13px">Return results after searching</i>
 ![avatar](public/ref/3.png)
 
-<i style="font-size: 13px">系统推荐新番</i>
+<i style="font-size: 13px">Recommended animation</i>
 ![avatar](public/ref/4.png)
 
-<i style="font-size: 13px">系统推荐新番</i>
+<i style="font-size: 13px">Recommended animation</i>
 ![avatar](public/ref/5.png)
 
+<i style="font-size: 13px">About the app</i>
+![avatar](public/ref/6.png)
 
-## 技术
+# 
+## <span id="04">Technology</span>
 - HTML5, CSS3
 - javaScript
-- jQuery
-- React.js
+- React
+- Node.js
 - Firebase
 - Bangumi API
+
+# 
+## <span id="05">Run</span>
+```markdown
+npm start
+```

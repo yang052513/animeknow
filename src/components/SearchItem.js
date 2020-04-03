@@ -4,6 +4,7 @@ function SearchItem(props) {
     let summary;
     let rank = props.search.rank > 0 ? props.search.rank : "暂无";
     let imageUrl = props.search.images === null ? "./image/img.jpg" : props.search.images.large
+    let  name = props.search.name_cn === "" ? props.search.name : props.search.name_cn
 
     let type;
     let story = "./image/";
@@ -74,7 +75,7 @@ function SearchItem(props) {
     return(
         <div style={borderColor} className="search-item">
             <div className="search-heading">
-                <p style={style}className="search-name">{props.search.name_cn}</p>
+                <p style={style}className="search-name">{name}</p>
                 <p style={bgColor} className="search-rank">Rank <span className="search-rank-text">{rank}</span></p>
             </div>
 
