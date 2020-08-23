@@ -1,6 +1,6 @@
 # animeKnow
 
-> https://animeknow1.web.app/
+> https://animeknow.netlify.app
 
 ## Table of Contents
 

@@ -1,33 +1,36 @@
-import React, { Component } from "react"
-import "../css/search.css"
-import SearchItem from "../components/SearchItem"
+import React, { Component } from 'react'
+import '../css/search.css'
+import SearchItem from '../components/SearchItem'
 
 class Search extends Component {
   constructor() {
     super()
     this.state = {
-      search_input: "",
+      search_input: '',
       result: [],
-      id: "",
-      name: "",
-      imgUrl: "",
+      id: '',
+      name: '',
+      imgUrl: '',
     }
     this.handleChange = this.handleChange.bind(this)
   }
 
   handleChange(event) {
     const { name, value } = event.target
+    this.setState({
+      search_input: value,
+    })
     let keywords = value
-    const proxyurl = "https://cors-anywhere.herokuapp.com/"
+    const proxyurl = 'https://cors-anywhere.herokuapp.com/'
     let requestUrl =
-      "https://api.bgm.tv/search/subject/" +
+      'https://api.bgm.tv/search/subject/' +
       keywords +
-      "?responseGroup=large&max_results=25"
+      '?responseGroup=large&max_results=25'
 
     if (value.length > 0) {
       fetch(proxyurl + requestUrl)
-        .then((response) => response.json())
-        .then((data) => {
+        .then(response => response.json())
+        .then(data => {
           this.setState({
             result: data.list,
           })
@@ -36,8 +39,9 @@ class Search extends Component {
         })
     }
   }
+
   render() {
-    const searchComponents = this.state.result.map((result) => (
+    const searchComponents = this.state.result.map(result => (
       <SearchItem key={result.id} search={result} />
     ))
 
